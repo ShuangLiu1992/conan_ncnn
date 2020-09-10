@@ -15,6 +15,9 @@ class NCNNConan(ConanFile):
     default_options = {"shared": False, "fPIC": True}
     generators = "cmake"
 
+
+    # forfe a rebuild
+
     build_requires = "protobuf/3.13.0@user/channel"
 
     def init(self):

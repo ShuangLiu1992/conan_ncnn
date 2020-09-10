@@ -16,6 +16,8 @@ class NCNNConan(ConanFile):
     generators = "cmake"
     exports_sources = "toolchain.cmake"
 
+    # forfe a rebuild
+
     def package(self):
         self.copy("toolchain.cmake")
 
