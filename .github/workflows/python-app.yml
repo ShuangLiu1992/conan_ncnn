@@ -38,7 +38,7 @@ jobs:
           CONAN_LOGIN_USERNAME: ${{ secrets.CONAN_LOGIN_USERNAME }}
           CONAN_PASSWORD: ${{ secrets.CONAN_PASSWORD }}
         run: |
-          sh build.sh
+          sh build_ios.sh
           python build_ios.py
   linux:
     runs-on: ubuntu-latest
