@@ -6,8 +6,7 @@ import os
 conan_api, _, _ = Conan.factory()
 
 conan_api.create_profile("default", detect=True)
-if platform.system() == "Linux":
-    conan_api.update_profile("default", "settings.compiler.libcxx", "libstdc++11")
+conan_api.update_profile("default", "settings.compiler.libcxx", "libc++")
 conan_api.config_set("general.cmake_generator", "Xcode")
 conan_api.update_profile("default", "settings.os", "iOS")
 conan_api.update_profile("default", "settings.os.version", "9.0")
