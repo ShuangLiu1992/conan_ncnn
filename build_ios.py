@@ -15,7 +15,7 @@ conan_api.update_profile("./profile/ios", "settings.os.version", "9.0")
 CONAN_LOGIN_USERNAME = os.getenv('CONAN_LOGIN_USERNAME')
 CONAN_PASSWORD = os.getenv('CONAN_PASSWORD')
 
-#conan_api.remote_add("bintray", f"https://api.bintray.com/conan/{CONAN_LOGIN_USERNAME}/test")
+conan_api.remote_add("bintray", f"https://api.bintray.com/conan/{CONAN_LOGIN_USERNAME}/test")
 conan_api.authenticate(CONAN_LOGIN_USERNAME, CONAN_PASSWORD, "bintray")
 
 conan_api.export("./ios_recipe", "ncnn", "20200727", CONAN_LOGIN_USERNAME, "github_action")
