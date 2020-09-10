@@ -1,0 +1,19 @@
+sudo: required
+cache: pip
+matrix:
+  include:
+  - os: linux
+    dist: bionic
+    language: python
+    python: "3.7"
+    compiler:
+      - gcc
+    script: 
+      - "sh build.sh && python3 build.py"
+  - os: macos
+    script: 
+      - "sh build.sh && python3 build.py"
+  - os: ios
+    osx_image: xcode11.6
+    script: 
+      - "sh build.sh && python3 build_ios.py"
