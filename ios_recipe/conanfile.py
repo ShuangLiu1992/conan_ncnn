@@ -28,6 +28,14 @@ class NCNNConan(ConanFile):
         self.output.success(f"md5: {md5}")
         tools.unzip("src.tar.gz")
 
+
+        tools.replace_in_file(f"{self.source_path}/CMakeLists.txt", 'project(ncnn)',
+                              '''
+                              project(ncnn)
+                              include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+                              conan_basic_setup()
+                              ''')
+
     def configure_cmake(self):
         cmake = CMake(self)
         cmake.definitions['CMAKE_POSITION_INDEPENDENT_CODE'] = self.options.fPIC
