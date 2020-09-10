@@ -42,7 +42,7 @@ class NCNNConan(ConanFile):
         cmake.definitions['NCNN_BUILD_TESTS'] = "OFF"
         cmake.definitions['NCNN_DISABLE_RTTI'] = "OFF"
         cmake.definitions['NCNN_DISABLE_EXCEPTION'] = "OFF"
-        cmake.definitions['NCNN_BENCHMARK'] = "OFF"
+        cmake.definitions['NCNN_BUILD_BENCHMARK'] = "OFF"
         cmake.definitions['NCNN_BUILD_EXAMPLES'] = "OFF"
 
         cmake.definitions['CMAKE_TOOLCHAIN_FILE'] = os.path.join(self.source_folder, "toolchain.cmake")
