@@ -1,5 +1,5 @@
 [requires]
-dlib/19.21@shuangliu1992/github_action
+ncnn/20200727@shuangliu1992/github_action
 
 [generators]
 cmake
