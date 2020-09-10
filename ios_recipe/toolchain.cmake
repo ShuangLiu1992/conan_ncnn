@@ -15,5 +15,6 @@ set(CMAKE_XCODE_ATTRIBUTE_ONLY_ACTIVE_ARCH "NO")
 
 set(CMAKE_OSX_DEPLOYMENT_TARGET "iO9.0S")
 set(CMAKE_OSX_ARCHITECTURES "arm64;x86_64;i386;armv7")
-set(CMAKE_OSX_SYSROOT "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.7.sdk")
+set(CMAKE_OSX_SYSROOT "iphoneos")
+set(CMAKE_XCODE_EFFECTIVE_PLATFORMS "-iphoneos;-iphonesimulator")
 set(CMAKE_SYSTEM_VERSION "9.0")
